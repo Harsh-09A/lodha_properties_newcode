@@ -763,29 +763,36 @@
 
  
   </section>
-
-  <!-- Mobile Footer Fixed Button -->
-
-  <section class="mobile-footer">
-    <div class="container-fluid fixed-bottom action-footer-container d-lg-none">
-      <ul class="nav nav-fill action-footer">
-        <li class="nav-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ <!-- Mobile Footer Fixed Button -->
+ <section>
+  <div class="container-fluid fixed-bottom action-footer-container">
+    <ul class="nav nav-fill action-footer">
+      <li class="nav-item ps-1">
+        <a
+          onclick="return gtag_report_conversion('https://wa.me/+918691837494');"
+          href="https://wa.me/+918691837494"
+          class="text-decoration-none text-white">
           <i class="fa-brands fa-whatsapp nav-icon"> </i> Whatsapp
-        </li>
+        </a>
+      </li>
+      <li class="nav-item ps-1">
+        <a
+          onclick="return gtag_report_conversion('tel:+918691837494');"
+          href="tel:+918691837494"
+          class="text-decoration-none text-white">
+          <i class="fa-solid fa-phone me-2"></i> Call Us
+        </a>
+      </li>
 
-        <li class="nav-item ps-1" style="border-left: 0.2px solid #fff">
-          <a href="tel:++911234567891" class="text-decoration-none text-white">
-            <i class="fa-solid fa-phone me-2"></i> Call Us
-          </a>
-        </li>
-
-        <li class="nav-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
-          style="border-left: 0.2px solid #fff">
-          <i class="fa-solid fa-envelope"></i> Enquire
-        </li>
-      </ul>
-    </div>
-  </section>
+      <li
+        class="nav-item"
+        data-bs-toggle="modal"
+        data-bs-target="#popupModal">
+        <i class="fa-solid fa-download nav-icon"></i> Brochure
+      </li>
+    </ul>
+  </div>
+</section>
 
   <!-- bootstrap -->
 
