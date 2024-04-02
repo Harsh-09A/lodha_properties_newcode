@@ -35,7 +35,7 @@ const handleFormSubmit = async (formId, nameField, emailField, phoneField) => {
           // alert("Message Sent Final");
           document.getElementById(formId).reset();
           if (response.status === 200) {
-              window.location.href = "thankyou.html";
+              window.location.href = "thank-you.html";
           }
       },
       function (error) {
