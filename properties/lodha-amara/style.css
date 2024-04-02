@@ -957,3 +957,9 @@ img.footer-img {
 .action-footer li:first-child {
   border-left: none !important;
 }
+
+@media  screen and (max-width:600px) {
+  #slider_section{
+    margin-top: 60px;
+  }
+}

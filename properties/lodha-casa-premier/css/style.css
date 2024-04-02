@@ -112,6 +112,11 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+
+  #slider_Section{
+    margin-top: 75px;
+  }
+
   .carousel-item {
     height: 100vh;
   }

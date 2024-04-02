@@ -119,6 +119,10 @@ body {
 
   /* slider form */
 
+  #slider_Section{
+    margin-top: 60px;
+  }
+
   .desktop_banner {
     display: none;
   }
