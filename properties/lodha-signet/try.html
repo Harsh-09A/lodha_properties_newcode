@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        @media screen and (min-width:1000px) {
+            .gall_img img {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+            }
+
+            .gallery {
+                display: flex;
+                /* flex-direction: column; */
+                justify-content: center;
+                align-items: center;
+            }
+
+            .gall_img img {
+                width: 150px;
+                height: 100px;
+            }
+        }
+
+        @media screen and (max-width:660px) {
+            .gall_img img {
+                width: 100px;
+                height: 70px;
+            }
+        }
+
+        .gall_img img {
+            border: 3px solid var(--colorSecondary);
+            /* border-radius: 10%; */
+        }
+
+        .gall_img img:hover,
+        .gall_main img:hover {
+            border: 3px solid var(--colorPrimary);
+            cursor: pointer;
+        }
+
+        .gall_main img {
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--colorSecondary);
+            /* border-radius: 5%; */
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="Gallery_Section" class="bg-body-white mb-3">
+        <div class="Heading">
+            <h3>Gallery</h3>
+        </div>
+        <div class="inner_section pt-2">
+
+            <div class="container gallery ">
+    
+                <div class="gall_img  ">
+                    <img onmouseenter="main.src=this.src" src="images/gallery/g1.jpg" alt="image">
+                    <img onmouseenter="main.src=this.src" src="images/gallery/g2.jpg" alt="image">
+                    <img onmouseenter="main.src=this.src" src="images/gallery/g3.jpg" alt="image">
+                    <img onmouseenter="main.src=this.src" src="images/gallery/g4.jpg" alt="image">
+                </div>
+                <div class="gall_main">
+                    <img src="images/gallery/g1.jpg" name="main" alt="">
+                </div>
+                <div class="gall_img  ">
+                    <img onmouseenter="main.src=this.src" src="images/gallery/g5.jpg" alt="image">
+                    <img onmouseenter="main.src=this.src" src="images/gallery/g6.jpg" alt="image">
+                    <img onmouseenter="main.src=this.src" src="images/gallery/g7.jpg" alt="image">
+                    <img onmouseenter="main.src=this.src" src="images/gallery/g8.jpg" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+$(document).ready(function () {
+            $(".at-title").click(function () {
+                $(this).toggleClass("active").next(".at-tab").slideToggle().parent().siblings().find(".at-tab").slideUp().prev().removeClass("active");
+            });
+        });
+
+    </script>
+</body>
+
+</html>
