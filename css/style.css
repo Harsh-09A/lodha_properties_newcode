@@ -142,7 +142,7 @@ html {
   }
 }
 
-.carousel-caption{
+.carousel-caption {
   z-index: 5;
 }
 
@@ -150,11 +150,11 @@ html {
   font-size: 3em !important;
 }
 
-.banner-btn{
+.banner-btn {
   background-color: var(--colorPrimary);
   color: var(--colorWhite);
 }
-.banner-btn:hover{
+.banner-btn:hover {
   background-color: var(--colorSecondary);
   color: var(--colorWhite);
 }
