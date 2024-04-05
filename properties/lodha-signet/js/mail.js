@@ -1,6 +1,6 @@
 (function () {
-  // emailjs.init("to9PlFrMMimgruuH0");
-  emailjs.init("BnRoAjGd5ec2E2VQn");
+  emailjs.init("to9PlFrMMimgruuH0");
+//   emailjs.init("BnRoAjGd5ec2E2VQn");
 })();
 
 // Get IP Address
@@ -23,8 +23,8 @@ const handleFormSubmit = async (formId, nameField, emailField, phoneField) => {
       user_email: document.getElementById(emailField).value,
       contact_number: document.getElementById(phoneField).value,
       ip_address: await getIpAddress(),
-      to_email: " harsh.autowebbed@gmail.com",
-      company_name: "Lodha Casa Permier",
+      to_email: " divinehomes80@gmail.com",
+      company_name: "Lodha Signet",
   };
 
   // Send Form
