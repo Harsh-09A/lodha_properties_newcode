@@ -1,6 +1,6 @@
 (function () {
-    emailjs.init("to9PlFrMMimgruuH0");
-    // emailjs.init("BnRoAjGd5ec2E2VQn");
+    // emailjs.init("to9PlFrMMimgruuH0");
+    emailjs.init("BnRoAjGd5ec2E2VQn");
 })();
 
 // Get IP Address
@@ -23,7 +23,7 @@ const handleFormSubmit = async (formId, nameField, emailField, phoneField) => {
         user_email: document.getElementById(emailField).value,
         contact_number: document.getElementById(phoneField).value,
         ip_address: await getIpAddress(),
-        to_email: " divinehomes80@gmail.com",
+        to_email: " harsh.autowebbed@gmail.com",
         company_name: "Lodha amara",
     };
 
@@ -71,6 +71,18 @@ window.onload = function () {
                 "user_email_modal",
                 "contact_number_modal",
                 "privacy_check_modal"
+            );
+        });
+    document
+        .getElementById("contact-form_footer")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
+            handleFormSubmit(
+                "contact-form_footer",
+                "user_name_footer",
+                "user_email_footer",
+                "contact_number_footer",
+                "privacy_check_footer"
             );
         });
 };
