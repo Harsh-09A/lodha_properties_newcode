@@ -3,8 +3,8 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 // popup function 
-// $(window).ready (function () {
-// 	setTimeout (function () {
-// 		$ ('#popupModal').modal ("show")
-// 	}, 3000)
-// })
+$(window).ready (function () {
+	setTimeout (function () {
+		$ ('#popupModal').modal ("show")
+	}, 3000)
+})
