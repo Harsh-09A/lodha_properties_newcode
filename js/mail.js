@@ -32,7 +32,7 @@ const handleFormSubmit = async (
     ip_address: await getIpAddress(),
 
     to_email: "harsh.autowebbed@gmail.com",
-    company_name: "JP North Mira Road",
+    company_name: "Lodha Preffered ",
   };
 
   // Send Form
