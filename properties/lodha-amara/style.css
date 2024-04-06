@@ -179,12 +179,14 @@ button.carousel-control-next:hover {
   --gray: #19191b;
   --lightgreen: #2a3431;
   --gold: #9d7f1c;
-  --golden-grad: linear-gradient(45deg,
-      #bf953f,
-      #fcf6ba,
-      #cf9e34,
-      #fbf5b7,
-      #aa771c);
+  --golden-grad: linear-gradient(
+    45deg,
+    #bf953f,
+    #fcf6ba,
+    #cf9e34,
+    #fbf5b7,
+    #aa771c
+  );
   --golden-grad2: linear-gradient(45deg, #bf953f, #fcf6ba, #aa771c);
 }
 
@@ -690,7 +692,6 @@ ul.listing li {
   .navbar-nav {
     justify-content: flex-end;
   }
-
 }
 
 @media screen and (min-width: 990px) {
@@ -958,8 +959,8 @@ img.footer-img {
   border-left: none !important;
 }
 
-@media  screen and (max-width:600px) {
-  #slider_section{
+@media screen and (max-width: 600px) {
+  #slider_section {
     margin-top: 60px;
   }
 }

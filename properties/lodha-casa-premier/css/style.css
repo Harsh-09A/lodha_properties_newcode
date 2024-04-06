@@ -112,8 +112,7 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-
-  #slider_Section{
+  #slider_Section {
     margin-top: 75px;
   }
 

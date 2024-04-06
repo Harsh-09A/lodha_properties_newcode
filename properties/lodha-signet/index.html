@@ -1,242 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lodha Signet</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lodha Signet</title>
+    <!-- link -->
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!-- link -->
-  <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
 
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
 
-  <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- fancy box -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-  <!-- fancy box -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/mail.js"></script>
+  </head>
 
-  <!-- EmailJS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="js/mail.js"></script>
-</head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#main-navbar"
+    data-bs-root-margin="0px 0px -50%"
+    data-bs-smooth-scroll="true"
+    class="scrollspy bg-body-tertiary"
+    tabindex="0"
+    data-offset="1">
+    <!-- Header -->
+    <header class="fixed-top shadow-sm">
+      <nav
+        class="navbar navbar-expand-lg w-100"
+        style="background-color: #000000"
+        id="main-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo/new-logo.png" alt="Logo" class="img-fluid" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"> </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#slider_Section">
+                  <i class="fa-solid fa-house nav-icon"></i>
+                  <span class="d-sm-inline"> Home </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#overview_Section">
+                  <i class="fa-solid fa-coins nav-icon"></i>
+                  <span class="d-sm-inline"> Overview </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#highlight_Section">
+                  <i class="fa-solid fa-star nav-icon"></i>
+                  <span class="d-sm-inline"> Highlights </span>
+                </a>
+              </li>
 
-<body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-root-margin="0px 0px -50%" data-bs-smooth-scroll="true"
-  class="scrollspy bg-body-tertiary" tabindex="0" data-offset="1">
-  <!-- Header -->
-  <header class="fixed-top shadow-sm">
-    <nav class="navbar navbar-expand-lg w-100" style="background-color: #000000" id="main-navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/logo/new-logo.png" alt="Logo" class="img-fluid" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"> </span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#slider_Section">
-                <i class="fa-solid fa-house nav-icon"></i>
-                <span class="d-sm-inline"> Home </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#overview_Section">
-                <i class="fa-solid fa-coins nav-icon"></i>
-                <span class="d-sm-inline"> Overview </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#highlight_Section">
-                <i class="fa-solid fa-star nav-icon"></i>
-                <span class="d-sm-inline"> Highlights </span>
-              </a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Price_section">
+                  <i class="fa-solid fa-coins"></i>
+                  <span class="d-sm-inline"> Price </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#amenities_Section">
+                  <i class="fa-solid fa-wifi nav-icon"></i>
+                  <span class="d-sm-inline"> Amenities </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Floor_Section">
+                  <i class="fa-solid fa-gear"></i>
+                  <span class="d-sm-inline"> Floor Plan </span>
+                </a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#Price_section">
-                <i class="fa-solid fa-coins"></i>
-                <span class="d-sm-inline"> Price </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#amenities_Section">
-                <i class="fa-solid fa-wifi nav-icon"></i>
-                <span class="d-sm-inline"> Amenities </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Floor_Section">
-                <i class="fa-solid fa-gear"></i>
-                <span class="d-sm-inline"> Floor Plan </span>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#Location_Section">
-                <i class="fa-solid fa-map-location nav-icon"></i>
-                <span class="d-sm-inline"> Location </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Gallery_Section">
-                <i class="fa-solid fa-images"></i>
-                <span class="d-sm-inline"> Gallery </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact_Section">
-                <i class="fa-solid fa-user nav-icon"></i>
-                <span class="d-sm-inline"> Contact Us </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <!-- slider -->
-    <section id="slider_Section">
-      <div class="desktop_banner">
-        <div id="carousel-Indicators" class="carousel slide desktop-slider" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carousel-Indicators" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carousel-Indicators" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="images/banner/Gudi-padwa-9.jpg" class="d-block w-100 img-fluid" alt="Banner1"
-                onerror="this.src='img/placeholder/placeholder.jpg'" />
-            </div>
-            <div class="carousel-item">
-              <img src="images/banner/2.jpeg" class="d-block w-100 img-fluid" alt="Banner2"
-                onerror="this.src='img/placeholder/placeholder.jpg'" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mobile_banner">
-        <div id="carousel-Indicators1" class="carousel slide desktop-slider" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carousel-Indicators1" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carousel-Indicators1" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="images/banner/signet_mobile_banner.jpg" class="d-block w-100 img-fluid" alt="Banner1"
-                onerror="this.src='img/placeholder/placeholder.jpg'" />
-            </div>
-            <div class="carousel-item">
-              <img src="images/banner/2.jpeg" class="d-block w-100 img-fluid" alt="Banner2"
-                onerror="this.src='img/placeholder/placeholder.jpg'" />
-            </div>
+              <li class="nav-item">
+                <a class="nav-link" href="#Location_Section">
+                  <i class="fa-solid fa-map-location nav-icon"></i>
+                  <span class="d-sm-inline"> Location </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Gallery_Section">
+                  <i class="fa-solid fa-images"></i>
+                  <span class="d-sm-inline"> Gallery </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact_Section">
+                  <i class="fa-solid fa-user nav-icon"></i>
+                  <span class="d-sm-inline"> Contact Us </span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
+      </nav>
+    </header>
 
-      <!-- slider form -->
-      <div class="container">
-        <div class="slider-content">
-          <h5>Lodha Signet</h5>
-          <h5>PALAVA, MANPADA, MUMBAI</h5>
-          <!-- <h4>At Vasai East</h4><br> -->
-          <h5>TYPE : Office Spaces</h5>
-          <h5>Starting Price: ₹ 49 Lakhs</h5>
-          <br />
+    <main>
+      <!-- slider -->
+      <section id="slider_Section">
+        <div class="desktop_banner">
+          <div
+            id="carousel-Indicators"
+            class="carousel slide desktop-slider"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carousel-Indicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"></button>
+              <button
+                type="button"
+                data-bs-target="#carousel-Indicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="images/banner/Gudi-padwa-9.jpg"
+                  class="d-block w-100 img-fluid"
+                  alt="Banner1"
+                  onerror="this.src='img/placeholder/placeholder.jpg'" />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/banner/2.jpeg"
+                  class="d-block w-100 img-fluid"
+                  alt="Banner2"
+                  onerror="this.src='img/placeholder/placeholder.jpg'" />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="container">
-        <div class="fixed-form text-white">
-          <h3>Get in touch with us.</h3>
-          <form id="contact-form-slider">
-            <div class="">
-              <input type="text" name="user_name_slider" placeholder="Name*" required class="form-control shadow-none"
-                id="user_name_slider" /><br />
+        <div class="mobile_banner">
+          <div
+            id="carousel-Indicators1"
+            class="carousel slide desktop-slider"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carousel-Indicators1"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"></button>
+              <button
+                type="button"
+                data-bs-target="#carousel-Indicators1"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
             </div>
-            <div class="">
-              <input type="email" name="user_email_slider" id="user_email_slider" placeholder="Email*"
-                class="form-control shadow-none" required /><br />
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="images/banner/signet_mobile_banner.jpg"
+                  class="d-block w-100 img-fluid"
+                  alt="Banner1"
+                  onerror="this.src='img/placeholder/placeholder.jpg'" />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/banner/2.jpeg"
+                  class="d-block w-100 img-fluid"
+                  alt="Banner2"
+                  onerror="this.src='img/placeholder/placeholder.jpg'" />
+              </div>
             </div>
-            <div class="">
-              <input type="tel" name="contact_number_slider" id="contact_number_slider" placeholder="Mobile*" required
-                class="form-control shadow-none" maxlength="10" /><br />
-            </div>
-            <!-- <div class="">
+          </div>
+        </div>
+
+        <!-- slider form -->
+        <div class="container">
+          <div class="slider-content">
+            <h5>Lodha Signet</h5>
+            <h5>PALAVA, MANPADA, MUMBAI</h5>
+            <!-- <h4>At Vasai East</h4><br> -->
+            <h5>TYPE : Office Spaces</h5>
+            <h5>Starting Price: ₹ 49 Lakhs</h5>
+            <br />
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="fixed-form text-white">
+            <h3>Get in touch with us.</h3>
+            <form id="contact-form-slider">
+              <div class="">
+                <input
+                  type="text"
+                  name="user_name_slider"
+                  placeholder="Name*"
+                  required
+                  class="form-control shadow-none"
+                  id="user_name_slider" /><br />
+              </div>
+              <div class="">
+                <input
+                  type="email"
+                  name="user_email_slider"
+                  id="user_email_slider"
+                  placeholder="Email*"
+                  class="form-control shadow-none"
+                  required /><br />
+              </div>
+              <div class="">
+                <input
+                  type="tel"
+                  name="contact_number_slider"
+                  id="contact_number_slider"
+                  placeholder="Mobile*"
+                  required
+                  class="form-control shadow-none"
+                  maxlength="10" /><br />
+              </div>
+              <!-- <div class="">
                             <input type="text" name="message" id="message_box" placeholder="Message"
                                 required class="form-control shadow-none" maxlength="10"><br>
                         </div> -->
-            <div class="d-flex ps-1 pb-2" style="font-size: 9px; color: #bfbfbf">
-              <input type="checkbox" checked="" required="" class="custom-control-input custom-control-input-green"
-                id="privacy_check" data-gtm-form-interact-field-id="0" />
+              <div
+                class="d-flex ps-1 pb-2"
+                style="font-size: 9px; color: #bfbfbf">
+                <input
+                  type="checkbox"
+                  checked=""
+                  required=""
+                  class="custom-control-input custom-control-input-green"
+                  id="privacy_check"
+                  data-gtm-form-interact-field-id="0" />
 
-              <label class="ps-2 pb-2 custom-control-label" for="privacy_check">
-                I consent to the use of my provided data in accordance with
-                the
-                <a href="privacy_policy.html" target="_blank" style="font: inherit; color: inherit">privacy
-                  policy</a>.</label>
-            </div>
-            <button class="contact_form_submit btn btn-gold" style="margin-top: 0">
-              Send
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Overview & highlights -->
-    <section id="backgorund_main">
-      <!-- Overview -->
-      <section id="overview_Section">
-        <div class="inner_section">
-          <div class="container align-item-center justify-content-center">
-            <div class="row row-cols-1 row-cols-md-6">
-              <div class="col-md-6">
-                <h4 class="sub_Heading">Lodha Signet</h4>
-                <br />
-                <!-- <h6>THE ICONIC LIFE</h6> -->
-                <p>
-                  For the first time in the Kalyan-Dombivli region, small and
-                  medium businesses will have the support of Grade-A spaces
-                  and a future-ready framework to reach new heights. With
-                  international standard spaces for enterprises, firms,
-                  clinics, retail, and food outlets. Located in a prime area
-                  with smart infrastructure, Lodha Signet offers a range of
-                  layouts to choose from, providing an ideal environment for
-                  transforming and growing your business. Add to that a
-                  beautifully manicured landscape and a row of stately arches
-                  that are a far cry from the cold featurelessness of most
-                  office buildings. An entrance lobby with a lofty ceiling,
-                  and escalators and elevators to effortlessly transport you
-                  to your destination. And separate entrances and lobbies on
-                  every floor to give your clientele a seamless path to your
-                  place of business. These spaces are designed to complement
-                  your business' sense of refinement and stature.
-                </p>
-                <div class="p-3">
-                  <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#popupModal">
-                    Download Brochure
-                  </button>
-                </div>
-                <hr />
+                <label
+                  class="ps-2 pb-2 custom-control-label"
+                  for="privacy_check">
+                  I consent to the use of my provided data in accordance with
+                  the
+                  <a
+                    href="privacy_policy.html"
+                    target="_blank"
+                    style="font: inherit; color: inherit"
+                    >privacy policy</a
+                  >.</label
+                >
               </div>
-              <div class="col-md-6">
-                <div class="over-img">
-                  <img src="images/banner/3.jpeg" alt="" class="img-fluid" />
+              <button
+                class="contact_form_submit btn btn-gold"
+                style="margin-top: 0">
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview & highlights -->
+      <section id="backgorund_main">
+        <!-- Overview -->
+        <section id="overview_Section">
+          <div class="inner_section">
+            <div class="container align-item-center justify-content-center">
+              <div class="row row-cols-1 row-cols-md-6">
+                <div class="col-md-6">
+                  <h4 class="sub_Heading">Lodha Signet</h4>
+                  <br />
+                  <!-- <h6>THE ICONIC LIFE</h6> -->
+                  <p>
+                    For the first time in the Kalyan-Dombivli region, small and
+                    medium businesses will have the support of Grade-A spaces
+                    and a future-ready framework to reach new heights. With
+                    international standard spaces for enterprises, firms,
+                    clinics, retail, and food outlets. Located in a prime area
+                    with smart infrastructure, Lodha Signet offers a range of
+                    layouts to choose from, providing an ideal environment for
+                    transforming and growing your business. Add to that a
+                    beautifully manicured landscape and a row of stately arches
+                    that are a far cry from the cold featurelessness of most
+                    office buildings. An entrance lobby with a lofty ceiling,
+                    and escalators and elevators to effortlessly transport you
+                    to your destination. And separate entrances and lobbies on
+                    every floor to give your clientele a seamless path to your
+                    place of business. These spaces are designed to complement
+                    your business' sense of refinement and stature.
+                  </p>
+                  <div class="p-3">
+                    <button
+                      class="btn btn-gold"
+                      data-bs-toggle="modal"
+                      data-bs-target="#popupModal">
+                      Download Brochure
+                    </button>
+                  </div>
+                  <hr />
+                </div>
+                <div class="col-md-6">
+                  <div class="over-img">
+                    <img src="images/banner/3.jpeg" alt="" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- highlight -->
+        <section id="highlight_Section">
+          <div class="inner_section">
+            <div class="container">
+              <div class="row row-cols-1 row-cols-md-6">
+                <div class="col-md-6">
+                  <div class="over-img">
+                    <img
+                      src="images/overview/banner2.jpg"
+                      alt=""
+                      class="img-fluid" />
+                  </div>
+                </div>
+                <div class="col-md-6 pt-3">
+                  <h4 class="sub_Heading">Highlights</h4>
+                  <ul class="pt-3">
+                    <li>Ample parking.</li>
+                    <li>Choice of Grade-A vastu-compliant offices.</li>
+                    <li>Located right on Kalyan-Shil Road, in Palava City.</li>
+                    <li>one of India's finest architects.</li>
+                    <li>Central Plaza designed by expert landscapers</li>
+                    <li>A grand double-height entrance lobby for offices</li>
+                    <li>A Doctors' Enclave: with a dedicated entrance lobby</li>
+                    <li>
+                      CCTV monitoring of common areas, and an advanced
+                      fire-safety system.
+                    </li>
+                  </ul>
+                  <div class="p-3">
+                    <button
+                      class="btn btn-gold"
+                      data-bs-toggle="modal"
+                      data-bs-target="#popupModal">
+                      Book SIte visit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- PRICE LIST -->
+      <section id="Price_section" class="mt-4 text-center">
+        <div class="price_overlay py-5">
+          <div class="Heading2 text-white">
+            <h3>Price</h3>
+          </div>
+          <div class="inner_section">
+            <div class="container pt-4">
+              <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+                <div class="col-md-3">
+                  <div class="conf">
+                    <div class="card-wrap">
+                      <div class="card-header">
+                        <h1>Retail Space</h1>
+                      </div>
+                      <div class="card-content">
+                        <p class="card-content-option">550 SQ.FT.</p>
+                        <p class="card-content-option">₹ Request for Price</p>
+                      </div>
+                      <div class="card-footer">
+                        <button
+                          class="card-footer-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#popupModal">
+                          learn more
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="conf">
+                    <div class="card-wrap">
+                      <div class="card-header">
+                        <h1>Doctor's Enclave</h1>
+                      </div>
+                      <div class="card-content">
+                        <p class="card-content-option">3350 SQ.FT.</p>
+                        <p class="card-content-option">₹ Request for Price</p>
+                      </div>
+                      <div class="card-footer">
+                        <button
+                          class="card-footer-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#popupModal">
+                          learn more
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="conf">
+                    <div class="card-wrap">
+                      <div class="card-header">
+                        <h1>Office Signet</h1>
+                      </div>
+                      <div class="card-content">
+                        <p class="card-content-option">250 SQ.FT.</p>
+                        <p class="card-content-option">₹ Request for Price</p>
+                      </div>
+                      <div class="card-footer">
+                        <button
+                          class="card-footer-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#popupModal">
+                          learn more
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="conf">
+                    <div class="card-wrap">
+                      <div class="card-header">
+                        <h1>Office Space - I Think</h1>
+                      </div>
+                      <div class="card-content">
+                        <p class="card-content-option">225 SQ.FT.</p>
+                        <p class="card-content-option">₹ Request for Price</p>
+                      </div>
+                      <div class="card-footer">
+                        <button
+                          class="card-footer-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#popupModal">
+                          learn more
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -244,233 +485,141 @@
         </div>
       </section>
 
-      <!-- highlight -->
-      <section id="highlight_Section">
-        <div class="inner_section">
-          <div class="container">
-            <div class="row row-cols-1 row-cols-md-6">
-              <div class="col-md-6">
-                <div class="over-img">
-                  <img src="images/overview/banner2.jpg" alt="" class="img-fluid" />
-                </div>
-              </div>
-              <div class="col-md-6 pt-3">
-                <h4 class="sub_Heading">Highlights</h4>
-                <ul class="pt-3">
-                  <li>Ample parking.</li>
-                  <li>Choice of Grade-A vastu-compliant offices.</li>
-                  <li>Located right on Kalyan-Shil Road, in Palava City.</li>
-                  <li>one of India's finest architects.</li>
-                  <li>Central Plaza designed by expert landscapers</li>
-                  <li>A grand double-height entrance lobby for offices</li>
-                  <li>A Doctors' Enclave: with a dedicated entrance lobby</li>
-                  <li>
-                    CCTV monitoring of common areas, and an advanced
-                    fire-safety system.
-                  </li>
-                </ul>
-                <div class="p-3">
-                  <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#popupModal">
-                    Book SIte visit
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- amenities -->
+      <section id="amenities_Section" class="text-center pt-5">
+        <div class="Heading">
+          <h3>Amenities</h3>
         </div>
-      </section>
-    </section>
-
-    <!-- PRICE LIST -->
-    <section id="Price_section" class="mt-4 text-center">
-      <div class="price_overlay py-5">
-        <div class="Heading2 text-white">
-          <h3>Price</h3>
-        </div>
-        <div class="inner_section">
-          <div class="container pt-4">
-            <div class="row row-cols-1 row-cols-md-3 justify-content-center">
-              <div class="col-md-3">
-                <div class="conf">
-                  <div class="card-wrap">
-                    <div class="card-header">
-                      <h1>Retail Space</h1>
+        <div class="inner_section pt-2">
+          <div class="container pt-2">
+            <div class="row row-cols-2 row-cols-md-4 justify-content-center">
+              <div class="col">
+                <figure class="snip0068">
+                  <img
+                    src="images/amenities/1000x480_CMH_floor.jpg"
+                    alt="sampl31" />
+                  <figcaption>
+                    <div>
+                      <h3>natural sunlight</h3>
                     </div>
-                    <div class="card-content">
-                      <p class="card-content-option">550 SQ.FT.</p>
-                      <p class="card-content-option">₹ Request for Price</p>
-                    </div>
-                    <div class="card-footer">
-                      <button class="card-footer-btn" data-bs-toggle="modal" data-bs-target="#popupModal">
-                        learn more
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                    <div><span>Buy Now</span></div>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#popupModal"></a>
+                  </figcaption>
+                </figure>
               </div>
 
-              <div class="col-md-3">
-                <div class="conf">
-                  <div class="card-wrap">
-                    <div class="card-header">
-                      <h1>Doctor's Enclave</h1>
+              <div class="col">
+                <figure class="snip0068">
+                  <img
+                    src="images/amenities/1000x480_CMH_Grand_lobby.jpg"
+                    alt="sampl31" />
+                  <figcaption>
+                    <div>
+                      <h3>Grand Lobby</h3>
                     </div>
-                    <div class="card-content">
-                      <p class="card-content-option">3350 SQ.FT.</p>
-                      <p class="card-content-option">₹ Request for Price</p>
-                    </div>
-                    <div class="card-footer">
-                      <button class="card-footer-btn" data-bs-toggle="modal" data-bs-target="#popupModal">
-                        learn more
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                    <div><span>Buy Now</span></div>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#popupModal"></a>
+                  </figcaption>
+                </figure>
               </div>
 
-              <div class="col-md-3">
-                <div class="conf">
-                  <div class="card-wrap">
-                    <div class="card-header">
-                      <h1>Office Signet</h1>
+              <div class="col">
+                <figure class="snip0068">
+                  <img
+                    src="images/amenities/1000x480_CMH_Lift_lobby.jpg"
+                    alt="sampl31" />
+                  <figcaption>
+                    <div>
+                      <h3>lift lobbies</h3>
                     </div>
-                    <div class="card-content">
-                      <p class="card-content-option">250 SQ.FT.</p>
-                      <p class="card-content-option">₹ Request for Price</p>
-                    </div>
-                    <div class="card-footer">
-                      <button class="card-footer-btn" data-bs-toggle="modal" data-bs-target="#popupModal">
-                        learn more
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                    <div><span>Buy Now</span></div>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#popupModal"></a>
+                  </figcaption>
+                </figure>
               </div>
 
-              <div class="col-md-3">
-                <div class="conf">
-                  <div class="card-wrap">
-                    <div class="card-header">
-                      <h1>Office Space - I Think</h1>
+              <div class="col">
+                <figure class="snip0068">
+                  <img
+                    src="images/amenities/1000x480_CMH_Parking.jpg"
+                    alt="sampl31" />
+                  <figcaption>
+                    <div>
+                      <h3>Ample Parking</h3>
                     </div>
-                    <div class="card-content">
-                      <p class="card-content-option">225 SQ.FT.</p>
-                      <p class="card-content-option">₹ Request for Price</p>
-                    </div>
-                    <div class="card-footer">
-                      <button class="card-footer-btn" data-bs-toggle="modal" data-bs-target="#popupModal">
-                        learn more
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                    <div><span>Buy Now</span></div>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#popupModal"></a>
+                  </figcaption>
+                </figure>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- amenities -->
-    <section id="amenities_Section" class="text-center pt-5">
-      <div class="Heading">
-        <h3>Amenities</h3>
-      </div>
-      <div class="inner_section pt-2">
-        <div class="container pt-2">
-          <div class="row row-cols-2 row-cols-md-4 justify-content-center">
-            <div class="col">
-              <figure class="snip0068">
-                <img src="images/amenities/1000x480_CMH_floor.jpg" alt="sampl31" />
-                <figcaption>
-                  <div>
-                    <h3>natural sunlight</h3>
-                  </div>
-                  <div><span>Buy Now</span></div>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#popupModal"></a>
-                </figcaption>
-              </figure>
-            </div>
+              <div class="col">
+                <figure class="snip0068">
+                  <img
+                    src="images/amenities/1000x480_CMH_Premium.jpg"
+                    alt="sampl31" />
+                  <figcaption>
+                    <div>
+                      <h3>retail spaces</h3>
+                    </div>
+                    <div><span>Buy Now</span></div>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#popupModal"></a>
+                  </figcaption>
+                </figure>
+              </div>
 
-            <div class="col">
-              <figure class="snip0068">
-                <img src="images/amenities/1000x480_CMH_Grand_lobby.jpg" alt="sampl31" />
-                <figcaption>
-                  <div>
-                    <h3>Grand Lobby</h3>
-                  </div>
-                  <div><span>Buy Now</span></div>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#popupModal"></a>
-                </figcaption>
-              </figure>
-            </div>
+              <div class="col">
+                <figure class="snip0068">
+                  <img
+                    src="images/amenities/1000x480_CMH_vastu.jpg"
+                    alt="sampl31" />
+                  <figcaption>
+                    <div>
+                      <h3>Vastu compliant layouts</h3>
+                    </div>
+                    <div><span>Buy Now</span></div>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#popupModal"></a>
+                  </figcaption>
+                </figure>
+              </div>
 
-            <div class="col">
-              <figure class="snip0068">
-                <img src="images/amenities/1000x480_CMH_Lift_lobby.jpg" alt="sampl31" />
-                <figcaption>
-                  <div>
-                    <h3>lift lobbies</h3>
-                  </div>
-                  <div><span>Buy Now</span></div>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#popupModal"></a>
-                </figcaption>
-              </figure>
-            </div>
+              <div class="col">
+                <figure class="snip0068">
+                  <img
+                    src="images/amenities/1000x480_CMH_washroom.jpg"
+                    alt="sampl31" />
+                  <figcaption>
+                    <div>
+                      <h3>Dedicated owner’s washroom</h3>
+                    </div>
+                    <div><span>Buy Now</span></div>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#popupModal"></a>
+                  </figcaption>
+                </figure>
+              </div>
 
-            <div class="col">
-              <figure class="snip0068">
-                <img src="images/amenities/1000x480_CMH_Parking.jpg" alt="sampl31" />
-                <figcaption>
-                  <div>
-                    <h3>Ample Parking</h3>
-                  </div>
-                  <div><span>Buy Now</span></div>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#popupModal"></a>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="col">
-              <figure class="snip0068">
-                <img src="images/amenities/1000x480_CMH_Premium.jpg" alt="sampl31" />
-                <figcaption>
-                  <div>
-                    <h3>retail spaces</h3>
-                  </div>
-                  <div><span>Buy Now</span></div>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#popupModal"></a>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="col">
-              <figure class="snip0068">
-                <img src="images/amenities/1000x480_CMH_vastu.jpg" alt="sampl31" />
-                <figcaption>
-                  <div>
-                    <h3>Vastu compliant layouts</h3>
-                  </div>
-                  <div><span>Buy Now</span></div>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#popupModal"></a>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="col">
-              <figure class="snip0068">
-                <img src="images/amenities/1000x480_CMH_washroom.jpg" alt="sampl31" />
-                <figcaption>
-                  <div>
-                    <h3>Dedicated owner’s washroom</h3>
-                  </div>
-                  <div><span>Buy Now</span></div>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#popupModal"></a>
-                </figcaption>
-              </figure>
-            </div>
-
-            <!-- <div class="col">
+              <!-- <div class="col">
                             <figure class="snip0068 ">
                                 <img src="images/amenities/swimming pool.jpg " alt="sampl31" />
                                 <figcaption>
@@ -482,206 +631,270 @@
                                 </figcaption>
                             </figure>
                         </div> -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- floor plan -->
-    <section id="Floor_Section" class="text-center pt-5">
-      <div class="Heading">
-        <h3>MASTER & FLOOR PLAN</h3>
-      </div>
-      <div class="inner_section">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-md-4">
-            <div class="col-md-4">
-              <div class="plan">
-                <div class="overlay_plan">
-                  <div class="p-3">
-                    <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#popupModal">
-                      Know More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 floor1">
-              <div class="plan2">
-                <div class="overlay_plan">
-                  <div class="p-3">
-                    <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#popupModal">
-                      Know More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 floor1">
-              <div class="plan3">
-                <div class="overlay_plan">
-                  <div class="p-3">
-                    <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#popupModal">
-                      Know More
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- location -->
-    <section id="Location_Section">
-      <div class="inner_section">
-        <div class="container">
-          <div class="row row-cols-1">
-            <div class="col-md-8">
-              <h4 class="sub_Heading pb-3">LOCATION ADVANTAGE</h4>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7544.746525133095!2d72.829586!3d19.003267000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cfa64d4041d3%3A0x1b4f8569c1db32ee!2sLodha%20Signet%2C%20Lower%20Parel!5e0!3m2!1sen!2sin!4v1711707728775!5m2!1sen!2sin"
-                width="100%" height="350" style="border: 0" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- floor plan -->
+      <section id="Floor_Section" class="text-center pt-5">
+        <div class="Heading">
+          <h3>MASTER & FLOOR PLAN</h3>
+        </div>
+        <div class="inner_section">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-md-4">
+              <div class="col-md-4">
+                <div class="plan">
+                  <div class="overlay_plan">
+                    <div class="p-3">
+                      <button
+                        class="btn btn-gold"
+                        data-bs-toggle="modal"
+                        data-bs-target="#popupModal">
+                        Know More
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 floor1">
+                <div class="plan2">
+                  <div class="overlay_plan">
+                    <div class="p-3">
+                      <button
+                        class="btn btn-gold"
+                        data-bs-toggle="modal"
+                        data-bs-target="#popupModal">
+                        Know More
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 floor1">
+                <div class="plan3">
+                  <div class="overlay_plan">
+                    <div class="p-3">
+                      <button
+                        class="btn btn-gold"
+                        data-bs-toggle="modal"
+                        data-bs-target="#popupModal">
+                        Know More
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4 pt-5">
-              <div class="Loc_item">
-                <p>
-                  <i class="fa-solid fa-location-dot"></i> Kalyan-Shil Road -
-                  5 Min
-                </p>
-                <p>
-                  <i class="fa-solid fa-location-dot"></i> Upcoming
-                  Kalyan-Taloja metro - 10 Min
-                </p>
-                <p>
-                  <i class="fa-solid fa-location-dot"></i> Dombivli Station -
-                  10 Min
-                </p>
-                <p>
-                  <i class="fa-solid fa-location-dot"></i> Navi Mumbai
-                  International Airport - 30 Min
-                </p>
-                <p>
-                  <i class="fa-solid fa-location-dot"></i> Thane, Navi Mumbai,
-                  Airoli, or Kalyan - 20 Min
-                </p>
-                <p>
-                  <i class="fa-solid fa-location-dot"></i> South Mumbai via
-                  the Eastern Freeway - 40 Min
-                </p>
-                <!-- <p><i class="fa-solid fa-location-dot"></i> Carnival Cinema - 5 Min </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- location -->
+      <section id="Location_Section">
+        <div class="inner_section">
+          <div class="container">
+            <div class="row row-cols-1">
+              <div class="col-md-8">
+                <h4 class="sub_Heading pb-3">LOCATION ADVANTAGE</h4>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7544.746525133095!2d72.829586!3d19.003267000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cfa64d4041d3%3A0x1b4f8569c1db32ee!2sLodha%20Signet%2C%20Lower%20Parel!5e0!3m2!1sen!2sin!4v1711707728775!5m2!1sen!2sin"
+                  width="100%"
+                  height="350"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="col-md-4 pt-5">
+                <div class="Loc_item">
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i> Kalyan-Shil Road -
+                    5 Min
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i> Upcoming
+                    Kalyan-Taloja metro - 10 Min
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i> Dombivli Station -
+                    10 Min
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i> Navi Mumbai
+                    International Airport - 30 Min
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i> Thane, Navi Mumbai,
+                    Airoli, or Kalyan - 20 Min
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i> South Mumbai via
+                    the Eastern Freeway - 40 Min
+                  </p>
+                  <!-- <p><i class="fa-solid fa-location-dot"></i> Carnival Cinema - 5 Min </p>
                                 <p><i class="fa-solid fa-location-dot"></i> Mc Donalds - 5 Min</p>
                                 <p><i class="fa-solid fa-location-dot"></i> Vasant Nagari Ground - 5 Min</p> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery plan -->
-    <section id="Gallery_Section" class="bg-white pt-4 mb-3 text-center">
-      <div class="Heading">
-        <h3>Gallery</h3>
-      </div>
-      <div class="inner_section pt-2">
-        <div class="container gallery">
-          <div class="gall_img">
-            <img onmouseenter="main.src=this.src" src="images/gallery/gallery1.jpg" alt="image" />
-            <img onmouseenter="main.src=this.src" src="images/gallery/gallery2.jpg" alt="image" />
-            <img onmouseenter="main.src=this.src" src="images/gallery/gallery3.jpg" alt="image" />
-          </div>
-          <div class="gall_main">
-            <img src="images/gallery/gallery1.jpg" name="main" alt="" />
-          </div>
-          <div class="gall_img">
-            <img onmouseenter="main.src=this.src" src="images/gallery/gallery4.jpg" alt="image" />
-            <img onmouseenter="main.src=this.src" src="images/gallery/gallery5.jpg" alt="image" />
-            <img onmouseenter="main.src=this.src" src="images/gallery/gallery6.jpg" alt="image" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- contact plan -->
-    <section id="contact_Section" class="pt-3">
-      <div class="inner_section">
-        <div class="Heading">
-          <h3>Enquire Now</h3>
-          <h4>Get in Touch with US.</h4>
-        </div>
-        <div class="container">
-          <form class="text-center" id="contact-form">
-            <div class="row">
-              <div class="col-md-4">
-                <input type="text" name="user_name" placeholder="Name*" required class="form-control shadow-none"
-                  id="user_name" />
-              </div>
-              <div class="col-md-4">
-                <input type="email" name="user_email" id="user_email" placeholder="Email*"
-                  class="form-control shadow-none" required />
-              </div>
-              <div class="col-md-4">
-                <input type="tel" name="contact_number" id="contact_number" placeholder="Mobile*" required
-                  class="form-control shadow-none" maxlength="10" />
-              </div>
-              <div class="col-md-12">
-                <div class="d-flex ps-1 pb-3 pt-3" style="font-size: 10px; color: #050505">
-                  <input type="checkbox" checked="" required="" class="custom-control-input custom-control-input-green"
-                    id="privacy_check_modal" data-gtm-form-interact-field-id="0" />
-
-                  <label class="ps-2 custom-control-label" for="privacy_check_modal">
-                    I consent to the use of my provided data in accordance
-                    with the
-                    <a href="privacy_policy.html" target="_blank" style="font: inherit; color: inherit">privacy
-                      policy</a>
-                  </label>
                 </div>
               </div>
-              <div class="col-md-4">
-                <button class="btn btn-gold"><span>Submit</span></button><br />
-              </div>
             </div>
-          </form>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="container text-center text-white">
-      <div class="d-flex justify-content-center">
-        <!-- <div class="qrcode">
+      <!-- Gallery plan -->
+      <section id="Gallery_Section" class="bg-white pt-4 mb-3 text-center">
+        <div class="Heading">
+          <h3>Gallery</h3>
+        </div>
+        <div class="inner_section pt-2">
+          <div class="container gallery">
+            <div class="gall_img">
+              <img
+                onmouseenter="main.src=this.src"
+                src="images/gallery/gallery1.jpg"
+                alt="image" />
+              <img
+                onmouseenter="main.src=this.src"
+                src="images/gallery/gallery2.jpg"
+                alt="image" />
+              <img
+                onmouseenter="main.src=this.src"
+                src="images/gallery/gallery3.jpg"
+                alt="image" />
+            </div>
+            <div class="gall_main">
+              <img src="images/gallery/gallery1.jpg" name="main" alt="" />
+            </div>
+            <div class="gall_img">
+              <img
+                onmouseenter="main.src=this.src"
+                src="images/gallery/gallery4.jpg"
+                alt="image" />
+              <img
+                onmouseenter="main.src=this.src"
+                src="images/gallery/gallery5.jpg"
+                alt="image" />
+              <img
+                onmouseenter="main.src=this.src"
+                src="images/gallery/gallery6.jpg"
+                alt="image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact plan -->
+      <section id="contact_Section" class="pt-3">
+        <div class="inner_section">
+          <div class="Heading">
+            <h3>Enquire Now</h3>
+            <h4>Get in Touch with US.</h4>
+          </div>
+          <div class="container">
+            <form class="text-center" id="contact-form">
+              <div class="row">
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    name="user_name"
+                    placeholder="Name*"
+                    required
+                    class="form-control shadow-none"
+                    id="user_name" />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="email"
+                    name="user_email"
+                    id="user_email"
+                    placeholder="Email*"
+                    class="form-control shadow-none"
+                    required />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="tel"
+                    name="contact_number"
+                    id="contact_number"
+                    placeholder="Mobile*"
+                    required
+                    class="form-control shadow-none"
+                    maxlength="10" />
+                </div>
+                <div class="col-md-12">
+                  <div
+                    class="d-flex ps-1 pb-3 pt-3"
+                    style="font-size: 10px; color: #050505">
+                    <input
+                      type="checkbox"
+                      checked=""
+                      required=""
+                      class="custom-control-input custom-control-input-green"
+                      id="privacy_check_modal"
+                      data-gtm-form-interact-field-id="0" />
+
+                    <label
+                      class="ps-2 custom-control-label"
+                      for="privacy_check_modal">
+                      I consent to the use of my provided data in accordance
+                      with the
+                      <a
+                        href="privacy_policy.html"
+                        target="_blank"
+                        style="font: inherit; color: inherit"
+                        >privacy policy</a
+                      >
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <button class="btn btn-gold"><span>Submit</span></button
+                  ><br />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container text-center text-white">
+        <div class="d-flex justify-content-center">
+          <!-- <div class="qrcode">
                     <img src="images/extra/qrcode.jpg   " class="" />
                     <p>
                         Rustomjee Crown Phase I<br>
                         MahaRERA - P51900003268
                     </p>
                 </div> -->
-        <div class="qrcode">
-          <img src="images/extra/qr.jpg" class="" />
-          <!-- <p>
+          <div class="qrcode">
+            <img src="images/extra/qr.jpg" class="" />
+            <!-- <p>
                         Lodha Tardeo<br />
                         MahaRERA - P99000051584
                     </p> -->
+          </div>
         </div>
-      </div>
-      <div>
-        <p>MahaRERA Registration No.: P51700054751</p>
-        <span>Agent RERA : A52000030379 </span>
-        <br />
-        <br />
+        <div>
+          <p>MahaRERA Registration No.: P51700054751</p>
+          <span>Agent RERA : A52000030379 </span>
+          <br />
+          <br />
 
-        <img src="images/extra/maharera-new.webp" alt="" />
-        <p>
-          <a href="https://maharera.mahaonline.gov.in" style="color: #000000; text-decoration: none" class="text-white">
-            maharera.mahaonline.gov.in
-          </a>
-        </p>
-        <!-- <p>
+          <img src="images/extra/maharera-new.webp" alt="" />
+          <p>
+            <a
+              href="https://maharera.mahaonline.gov.in"
+              style="color: #000000; text-decoration: none"
+              class="text-white">
+              maharera.mahaonline.gov.in
+            </a>
+          </p>
+          <!-- <p>
                     Site Address : Sai World City, Palaspe Phata Junction, Panvel - 410
                     206.
                 </p>
@@ -689,18 +902,18 @@
                     Corporate Office : Paradise Lifespaces LLP, 1701, Satra Plaza, Plot
                     No. 19 & 20, Sector - 19D, Vashi, Navi Mumbai.
                 </p> -->
-        <div>
-          <span>
-            Disclaimer : The content is for information purposes only and does
-            not constitute an offer to avail of any service. Prices mentioned
-            are subject to change without notice and properties mentioned are
-            subject to availability. Images for representation purpose only.
-            This is not the official website. Website maintained by our online
-            marketing agency pact partners. We may share data with rera
-            registered brokers/companies for further processing. We may also
-            send updates to the mobile number/email id registered with us.
-          </span>
-          <!-- <span id="dots20" style="display: inline"></span>
+          <div>
+            <span>
+              Disclaimer : The content is for information purposes only and does
+              not constitute an offer to avail of any service. Prices mentioned
+              are subject to change without notice and properties mentioned are
+              subject to availability. Images for representation purpose only.
+              This is not the official website. Website maintained by our online
+              marketing agency pact partners. We may share data with rera
+              registered brokers/companies for further processing. We may also
+              send updates to the mobile number/email id registered with us.
+            </span>
+            <!-- <span id="dots20" style="display: inline"></span>
                     <span id="more20" style="display: none">
                         <span>
                             The images showcased on this website are for representational purposes only and may not
@@ -720,136 +933,200 @@
                     <span class="read_more" onclick="toggleContent('dots20','more20', 'myBtn20')" id="myBtn20">
                         Read More
                     </span> -->
-          <!-- <button
+            <!-- <button
                 onclick="toggleContent('dots8','more8', 'myBtn8')"
                 class="read_more"
                 id="myBtn8"></button> -->
-        </div>
-
-        <p class="pb-4 pt-2">
-          <a href="privacy_policy.html" target="_blank" style="text-decoration: none">
-            Privacy Policy</a>
-          |
-          <a href="termsandcondition.html" target="_blank" style="text-decoration: none">
-            Terms And Conditions</a>
-        </p>
-        <!-- <p>Copyright © 2024 - All Rights Reserved. Marketing Partner: <a href="https://ambroserealty.in/"
-                        target="_blank">Ambrose Realty</a></p> -->
-      </div>
-    </div>
-  </footer>
-
-  <!-- Mobile Footer Fixed Button -->
-  <section>
-    <div class="container fixed-bottom action-footer-container p-0">
-      <ul class="nav nav-fill action-footer">
-        <li class="nav-item ps-1">
-          <a onclick="return gtag_report_conversion('https://wa.me/+918691837494');" href="https://wa.me/+918691837494"
-            class="text-decoration-none text-white">
-            <i class="fa-brands fa-whatsapp nav-icon"> </i> Whatsapp
-          </a>
-        </li>
-        <li class="nav-item ps-1">
-          <a onclick="return gtag_report_conversion('tel:+918691837494');" href="tel:+918691837494"
-            class="text-decoration-none text-white">
-            <i class="fa-solid fa-phone me-2"></i> Call Us
-          </a>
-        </li>
-
-        <li class="nav-item" data-bs-toggle="modal" data-bs-target="#popupModal">
-          <i class="fa-solid fa-download nav-icon"></i> Brochure
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Modal -->
-  <section>
-    <div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <!-- Modal Title -->
-          <div class="modal-header">
-            <!-- <h1 class="modal-title fs-5" id="ModalLabel">Modal title</h1> -->
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
 
-          <!-- Modal Body -->
-          <div class="modal-body">
-            <div class="container text-center text-white">
-              <img src="images/logo/lodha_signet_logo.png" alt="" width="200px" />
-              <p class="mt-3">Register Here And Avail The Best Offers!!</p>
+          <p class="pb-4 pt-2">
+            <a
+              href="privacy_policy.html"
+              target="_blank"
+              style="text-decoration: none">
+              Privacy Policy</a
+            >
+            |
+            <a
+              href="termsandcondition.html"
+              target="_blank"
+              style="text-decoration: none">
+              Terms And Conditions</a
+            >
+          </p>
+          <!-- <p>Copyright © 2024 - All Rights Reserved. Marketing Partner: <a href="https://ambroserealty.in/"
+                        target="_blank">Ambrose Realty</a></p> -->
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Footer Fixed Button -->
+    <section>
+      <div class="container fixed-bottom action-footer-container p-0">
+        <ul class="nav nav-fill action-footer">
+          <li class="nav-item ps-1">
+            <a
+              onclick="return gtag_report_conversion('https://wa.me/+918691837494');"
+              href="https://wa.me/+918691837494"
+              class="text-decoration-none text-white">
+              <i class="fa-brands fa-whatsapp nav-icon"> </i> Whatsapp
+            </a>
+          </li>
+          <li class="nav-item ps-1">
+            <a
+              onclick="return gtag_report_conversion('tel:+918691837494');"
+              href="tel:+918691837494"
+              class="text-decoration-none text-white">
+              <i class="fa-solid fa-phone me-2"></i> Call Us
+            </a>
+          </li>
+
+          <li
+            class="nav-item"
+            data-bs-toggle="modal"
+            data-bs-target="#popupModal">
+            <i class="fa-solid fa-download nav-icon"></i> Brochure
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <section>
+      <div
+        class="modal fade"
+        id="popupModal"
+        tabindex="-1"
+        aria-labelledby="ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Title -->
+            <div class="modal-header">
+              <!-- <h1 class="modal-title fs-5" id="ModalLabel">Modal title</h1> -->
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
             </div>
-            <div class="container">
-              <!--Enquire Form  -->
-              <div class="enquire-section">
-                <span class="d-block text-center fw-bold my-2 text-white">
-                  Get The Best Quote
-                </span>
-                <div class="container">
-                  <!-- Form -->
-                  <form id="contact-form-modal" class="text-center">
-                    <div class="mb-3">
-                      <label for="user_name_modal" class="form-label">Name</label>
-                      <input type="text" class="form-control inputStyle shadow-none" name="user_name"
-                        id="user_name_modal" placeholder="Name" autocomplete="off" required />
-                    </div>
 
-                    <div class="mb-3">
-                      <label for="user_email_modal" class="form-label">Email address</label>
-                      <input type="email" class="form-control inputStyle shadow-none" name="user_email"
-                        id="user_email_modal" placeholder="Email Address" autocomplete="off" />
-                    </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <div class="container text-center text-white">
+                <img
+                  src="images/logo/lodha_signet_logo.png"
+                  alt=""
+                  width="200px" />
+                <p class="mt-3">Register Here And Avail The Best Offers!!</p>
+              </div>
+              <div class="container">
+                <!--Enquire Form  -->
+                <div class="enquire-section">
+                  <span class="d-block text-center fw-bold my-2 text-white">
+                    Get The Best Quote
+                  </span>
+                  <div class="container">
+                    <!-- Form -->
+                    <form id="contact-form-modal" class="text-center">
+                      <div class="mb-3">
+                        <label for="user_name_modal" class="form-label"
+                          >Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control inputStyle shadow-none"
+                          name="user_name"
+                          id="user_name_modal"
+                          placeholder="Name"
+                          autocomplete="off"
+                          required />
+                      </div>
 
-                    <div class="mb-3">
-                      <label for="contact_number_modal" class="form-label">Phone Number</label>
-                      <input type="tel" class="form-control inputStyle shadow-none" name="contact_number"
-                        id="contact_number_modal" pattern="[0-9]{10}" placeholder="Phone Number"
-                        oninvalid="setCustomValidity('Please enter a valid phone number. e.g., 12345-67890')"
-                        oninput="setCustomValidity('')" required />
-                    </div>
-                    <div class="d-flex ps-1 pb-2" style="font-size: 10px; color: #bfbfbf">
-                      <input type="checkbox" checked="" required=""
-                        class="custom-control-input custom-control-input-green" id="privacy_check_modal"
-                        data-gtm-form-interact-field-id="0" />
+                      <div class="mb-3">
+                        <label for="user_email_modal" class="form-label"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control inputStyle shadow-none"
+                          name="user_email"
+                          id="user_email_modal"
+                          placeholder="Email Address"
+                          autocomplete="off" />
+                      </div>
 
-                      <label class="ps-2 custom-control-label" for="privacy_check_modal">
-                        I give my consent for the
-                        <a href="privacy_policy.html" target="_blank" style="font: inherit; color: inherit">privacy
-                          policy</a>
-                        to apply to the processing of the provided data. I
-                        give Ambrose Realty and its representatives permission
-                        to contact me via phone, text, email, or whatsapp with
-                        its offers and products. This agreement takes
-                        precedence over any DNC/NDNC registration
-                      </label>
-                    </div>
+                      <div class="mb-3">
+                        <label for="contact_number_modal" class="form-label"
+                          >Phone Number</label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control inputStyle shadow-none"
+                          name="contact_number"
+                          id="contact_number_modal"
+                          pattern="[0-9]{10}"
+                          placeholder="Phone Number"
+                          oninvalid="setCustomValidity('Please enter a valid phone number. e.g., 12345-67890')"
+                          oninput="setCustomValidity('')"
+                          required />
+                      </div>
+                      <div
+                        class="d-flex ps-1 pb-2"
+                        style="font-size: 10px; color: #bfbfbf">
+                        <input
+                          type="checkbox"
+                          checked=""
+                          required=""
+                          class="custom-control-input custom-control-input-green"
+                          id="privacy_check_modal"
+                          data-gtm-form-interact-field-id="0" />
 
-                    <button type="submit" class="btn btn-gold">Submit</button>
-                  </form>
+                        <label
+                          class="ps-2 custom-control-label"
+                          for="privacy_check_modal">
+                          I give my consent for the
+                          <a
+                            href="privacy_policy.html"
+                            target="_blank"
+                            style="font: inherit; color: inherit"
+                            >privacy policy</a
+                          >
+                          to apply to the processing of the provided data. I
+                          give Ambrose Realty and its representatives permission
+                          to contact me via phone, text, email, or whatsapp with
+                          its offers and products. This agreement takes
+                          precedence over any DNC/NDNC registration
+                        </label>
+                      </div>
+
+                      <button type="submit" class="btn btn-gold">Submit</button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Modal Footer -->
-          <div class="modal-footer"></div>
+            <!-- Modal Footer -->
+            <div class="modal-footer"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Jquery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
 
-  <!-- bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
 
-  <!-- link -->
-  <script src="js/script.js"></script>
-</body>
-
+    <!-- link -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
