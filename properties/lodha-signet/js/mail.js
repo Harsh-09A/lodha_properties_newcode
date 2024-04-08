@@ -27,8 +27,23 @@ const handleFormSubmit = async (formId, nameField, emailField, phoneField) => {
     company_name: "Lodha Signet",
   };
 
-  // Send Form
+  // Send CURL
+  const sendToCurl = (templateParams) => {
+    console.log(templateParams);
+    $.ajax({
+      type: "POST",
+      url: "curl.php",
+      data: templateParams, // serializes the form's elements.
+      success: function (data) {
+        // window.location.href = "thankyou.html";
+        console.log(data); // show response from the php script.
+      },
+    });
+  };
 
+  sendToCurl(templateParams);
+
+  // Send Form
   emailjs.send("contact_service", "contact_form", templateParams).then(
     function (response) {
       console.log("SUCCESS!", response.status, response.text);
