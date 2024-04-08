@@ -297,44 +297,74 @@ header {
 
 /* Hightlights */
 
-#Highlights {
-  background: #353535;
-  padding: 30px 0px;
-  margin-top: 10px;
+.highlights_row img {
+  width: 100px;
 }
 
-.high_eff p {
-  color: rgba(255, 255, 255, 0.8);
-  font-family: Lato;
-  font-size: 1.1em;
-  font-weight: 400;
-  padding: 15px 25px;
-  /**/
+.highlights_row p {
+  padding-top: 0.9em;
+  font-size: 0.9em;
+}
+
+
+.whybuy li:before {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: var(--colorPrimary);
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.whybuy li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 0;
+  background: var(--colorPrimary);
+  top: 0;
+  z-index: 1;
+  transition: ease all 0.5s;
+}
+
+.whybuy li {
+  background: #eaeaea;
+  margin-bottom: 15px;
+  padding: 15px 10px 15px 30px;
   position: relative;
-  display: block;
-  text-decoration: none;
-  text-transform: capitalize;
-  margin: 20px 0;
+  list-style: none;
 }
 
-.highlights_effect p {
-  border: 0 solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-  outline: 1px solid;
-  outline-color: rgba(255, 255, 255, 0.5);
-  outline-offset: 0px;
-  text-shadow: none;
-  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+.whybuy {
+  content: "";
+  padding-left: 0;
 }
 
-.highlights_effect p:hover {
-  border: 1px solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(255, 255, 255, 0.2);
-  outline-color: rgba(255, 255, 255, 0);
-  outline-offset: 15px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+.whybuy li:hover::after {
+  width: 100%;
+  transition: ease all 0.5s;
 }
+
+.whybuy li:hover:before {
+  background: var(--colorWhite);
+  transition: ease all 0.5s;
+}
+
+.whybuy li:hover {
+  color: var(--colorWhite);
+  transition: ease all 0.5s;
+}
+
+.whybuy li span {
+  position: relative;
+  z-index: 2;
+  padding-left: 5px;
+}
+
 
 /* Configuration */
 
@@ -348,29 +378,6 @@ header {
   /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
 }
 
-/* .pricing-table:after {
-    background-color: #fff;
-    bottom: -60px;
-    content: "";
-    height: 60px;
-    position: absolute;
-    width: 60%;
-    left: 50%;
-    transform: rotate(-12deg);
-    transform-origin: left top 0;
-}
-
-.pricing-table:before {
-    background-color: #0303034d;
-    bottom: -60px;
-    content: "";
-    height: 60px;
-    position: absolute;
-    width: 60%;
-    right: 50%;
-    transform: rotate(12deg);
-    transform-origin: right top 0;
-} */
 
 .pricing-table .pricing-header {
   background-color: #e3d1b9;
@@ -432,7 +439,7 @@ header {
 }
 
 #Price_section {
-  background-image: url(../images/banner/1000x480_Palava_Premier_Clubhouse.jpg);
+  background-image: url(../images/overview/over.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -443,85 +450,63 @@ header {
   background-color: var(--colorBackgroundOverlay);
 }
 
-/*  new code */
+/*  new  amenities code */
 
-.amenities-card {
+.thumbnails {
+  /* width: calc(100% / 3); */
   width: 100%;
-  height: 20vw;
-  min-height: 250px;
-  background-color: rgba(0, 0, 0);
+  height: 200px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
   position: relative;
   overflow: hidden;
-  border-radius: 0.4rem;
-  box-shadow: -0.5rem -0.5rem 2rem rgba(0, 0, 0, 0.2),
-    0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
-  margin-bottom: 25px;
+  transition: transform .3s;
 }
 
-.amenities-card:hover .title {
-  transform: translateY(100%);
-}
-
-.amenities-card:hover .photo {
-  opacity: 1;
-}
-
-.amenities-card .title {
-  background-color: rgba(32, 37, 41, 0.5);
-  backdrop-filter: blur(0.5rem);
-  width: 100%;
-  /* height: 35%; */
-  position: absolute;
-  bottom: 0%;
-  padding: 1rem;
-  border-top: 0.1rem solid #4c555c;
-  box-shadow: 0rem -0.1rem 0.5rem rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  transition: 0.5s ease-in;
-}
-
-.amenities-card .photo {
+.thumbnails img {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* background-position: center; */
+  object-fit: cover;
+  /* object-position: 50% 20%; */
+  border-radius: 5%;
+}
+
+.black {
+  text-align: center;
+  background: #000;
+  background-blend-mode: multiply;
+  color: #fff;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  opacity: 0.8;
-  transition: 0.5s ease-in-out;
-  /* aspect-ratio: 3/2; */
+  opacity: .7;
+  border-radius: 5%;
 }
 
-.amenities-card .img1 {
-  background-image: url(../images/amenities/cctvsurveillance.jpg);
-}
-
-.amenities-card .img2 {
-  background-image: url(../images/amenities/parking.jpg);
-}
-
-.amenities-card .img3 {
-  background-image: url(../images/amenities/partlounge.jpg);
-}
-
-.amenities-card .img4 {
-  background-image: url(../images/amenities/playground.jpg);
-}
-
-.amenities-card .img5 {
-  background-image: url(../images/amenities/shivatemple.jpg);
-}
-
-.amenities-card .img6 {
-  background-image: url(../images/amenities/sportcomplex.jpg);
-}
-
-.amenities-card h4 {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 500;
+.title {
+  color: #fff;
   font-size: 1.5em;
-  color: #f3f5f8;
+  align-self: center;
+  position: absolute;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+.black,
+.title {
+  transition: opacity .3s;
+}
+
+.thumbnails:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  z-index: 20;
+}
+
+.thumbnails:hover .black,
+.thumbnails:hover .title {
+  opacity: 0;
 }
 
 /* FLoor Plan */
@@ -529,7 +514,7 @@ header {
 .plan {
   width: 100%;
   min-height: 250px;
-  background-image: url(../images/plan/floorplan1.jpg);
+  background-image: url(../images/plan/1bhk.webp);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -542,7 +527,7 @@ header {
 .plan2 {
   width: 100%;
   min-height: 250px;
-  background-image: url(../images/plan/floorplan2.jpg);
+  background-image: url(../images/plan/2bhk.webp);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -552,18 +537,7 @@ header {
   /* filter: blur(3px); */
 }
 
-.plan3 {
-  width: 100%;
-  min-height: 250px;
-  background-image: url(../images/plan/plan3.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid var(--colorPrimary);
-  /* filter: blur(3px); */
-}
+
 
 /* .overlay_plan{
     background-color: var(--colorBackgroundOverlay);
@@ -573,7 +547,7 @@ header {
 /* Location  */
 
 .Loc_item {
-  font-size: 1.3em;
+  font-size: 1em;
   text-transform: capitalize;
 }
 
