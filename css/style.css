@@ -140,6 +140,9 @@ html {
   .carousel-item .banner4 {
     content: url("../img/banners/signet_mobile_banner.jpg");
   }
+  .carousel-item .banner5 {
+    content: url("../img/banners/palava_Mobile.jpg");
+  }
 }
 
 .carousel-caption {
@@ -190,6 +193,10 @@ html {
 /* Residential Property Card */
 #properties_section {
   background-color: #eee;
+}
+
+.property_container .row{
+  --bs-gutter-y: 2rem;
 }
 
 .property_container {
